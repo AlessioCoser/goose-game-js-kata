@@ -21,4 +21,12 @@ test('GooseGame', function () {
 
     equal(game.addPlayer('Pippo'), 'Pippo: Giocatore già presente')
   })
+
+  test('move a player from Partenza', function () {
+    let game = new GooseGame()
+    game.addPlayer('Pippo')
+
+    var moveResponse = game.movePlayer('Pippo', 4, 2)
+    equal(moveResponse, 'Pippo tira 4, 2. Pippo muove da Partenza a 6')
+  })
 })
