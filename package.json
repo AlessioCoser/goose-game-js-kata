@@ -1,0 +1,14 @@
+{
+  "name": "goose-game-kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "m.test test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "m.test": "0.0.53"
+  }
+}
