@@ -38,4 +38,17 @@ test('GooseGame', function () {
     var moveResponse = game.movePlayer('Pippo', 2, 2)
     equal(moveResponse, 'Pippo tira 2, 2. Pippo muove da 5 a 9')
   })
+
+  test('player wins the game when reaches 63', function () {
+    let game = new GooseGame()
+    game.addPlayer('Pippo')
+    game.movePlayer('Pippo', 6, 6)
+    game.movePlayer('Pippo', 6, 6)
+    game.movePlayer('Pippo', 6, 6)
+    game.movePlayer('Pippo', 6, 6)
+    game.movePlayer('Pippo', 6, 6)
+
+    var moveResponse = game.movePlayer('Pippo', 2, 1)
+    equal(moveResponse, 'Pippo tira 2, 1. Pippo muove da 60 a 63. Pippo vince!!')
+  })
 })
