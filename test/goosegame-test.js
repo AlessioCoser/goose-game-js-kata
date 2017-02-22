@@ -52,16 +52,16 @@ test('GooseGame', function () {
     equal(moveResponse, 'Pippo tira 2, 1. Pippo muove da 60 a 63. Pippo vince!!')
   })
 
-  // test('player bounces when player exceeds 63', function () {
-  //   let game = new GooseGame()
-  //   game.addPlayer('Pippo')
-  //   game.movePlayer('Pippo', 6, 6)
-  //   game.movePlayer('Pippo', 6, 6)
-  //   game.movePlayer('Pippo', 6, 6)
-  //   game.movePlayer('Pippo', 6, 6)
-  //   game.movePlayer('Pippo', 6, 6)
+  test('player bounces when player exceeds 63', function () {
+    let game = new GooseGame()
+    game.addPlayer('Pippo')
+    game.movePlayer('Pippo', 6, 6)
+    game.movePlayer('Pippo', 6, 6)
+    game.movePlayer('Pippo', 6, 6)
+    game.movePlayer('Pippo', 6, 6)
+    game.movePlayer('Pippo', 6, 6)
 
-  //   var moveResponse = game.movePlayer('Pippo', 2, 3)
-  //   equal(moveResponse, 'Pippo tira 2, 3. Pippo muove da 60 a 63. Pippo rimbalza! Pippo torna a 61')
-  // })
+    var moveResponse = game.movePlayer('Pippo', 2, 3)
+    equal(moveResponse, 'Pippo tira 2, 3. Pippo muove da 60 a 63. Pippo rimbalza! Pippo torna a 61')
+  })
 })
