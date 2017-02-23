@@ -1,5 +1,5 @@
 const {equal} = require('assert')
-const {GooseGame} = require('../lib/goosegame')
+const GooseGame = require('../lib/goosegame')
 
 test('GooseGame', function () {
   test('add player to game', function () {
