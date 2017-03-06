@@ -1,5 +1,5 @@
 const {equal} = require('assert')
-const GooseGame = require('../lib/goosegame')
+const GooseGame = require('../lib/goose-game')
 
 test('GooseGame', function () {
   test('add player to game', function () {
@@ -37,6 +37,14 @@ test('GooseGame', function () {
 
     var moveResponse = game.movePlayer('Pippo', [2, 2])
     equal(moveResponse, 'Pippo tira 2, 2. Pippo muove da 5 a 9')
+  })
+
+  test('do not move a non existent player', function () {
+    let game = new GooseGame()
+    game.addPlayer('Pippo')
+    var moveResponse = game.movePlayer('pluto', [2, 3])
+
+    equal(moveResponse, 'pluto: Giocatore non trovato')
   })
 
   test('player wins the game when reaches 63', function () {
