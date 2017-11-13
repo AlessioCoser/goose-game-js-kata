@@ -10,5 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "m.test": "0.0.53"
+  },
+  "standard": {
+    "globals": [
+      "test"
+    ]
   }
 }
