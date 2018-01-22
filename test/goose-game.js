@@ -16,4 +16,12 @@ test('GooseGame', () => {
 
     equal(response, 'players: Pippo, Pluto')
   })
+
+  test('returns error if a player already exists', () => {
+    var game = new GooseGame()
+    game.send('add player Pippo')
+    var response = game.send('add player Pippo')
+
+    equal(response, 'Pippo: already existing player')
+  })
 })
