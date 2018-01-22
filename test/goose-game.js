@@ -25,10 +25,9 @@ test('GooseGame', () => {
     equal(response, 'Pippo: already existing player')
   })
 
-  test('move player', () => {
+  test('move player from the beginning', () => {
     var game = new GooseGame()
     game.send('add player Pippo')
-    game.send('add player Pluto')
 
     let response = game.send('move Pippo 4, 2')
 
