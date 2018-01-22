@@ -43,4 +43,18 @@ test('GooseGame', () => {
 
     equal(response, 'Pippo rolls 2, 3. Pippo moves from 6 to 11')
   })
+
+  test('player wins the game', () => {
+    var game = new GooseGame()
+    game.send('add player Pippo')
+
+    game.send('move Pippo 6, 6')
+    game.send('move Pippo 6, 6')
+    game.send('move Pippo 6, 6')
+    game.send('move Pippo 6, 6')
+    game.send('move Pippo 6, 6')
+    let response = game.send('move Pippo 1, 2')
+
+    equal(response, 'Pippo rolls 1, 2. Pippo moves from 60 to 63. Pippo Wins!!')
+  })
 })
