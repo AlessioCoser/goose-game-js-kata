@@ -33,4 +33,14 @@ test('GooseGame', () => {
 
     equal(response, 'Pippo rolls 4, 2. Pippo moves from Start to 6')
   })
+
+  test('move player from another position', () => {
+    var game = new GooseGame()
+    game.send('add player Pippo')
+
+    game.send('move Pippo 4, 2')
+    let response = game.send('move Pippo 2, 3')
+
+    equal(response, 'Pippo rolls 2, 3. Pippo moves from 6 to 11')
+  })
 })
