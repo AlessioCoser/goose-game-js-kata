@@ -67,8 +67,8 @@ test('GooseGame', () => {
     game.send('move Pippo 6, 6')
     game.send('move Pippo 6, 6')
     game.send('move Pippo 6, 6')
-    let response = game.send('move Pippo 3, 2')
+    let response = game.send('move Pippo 3, 6')
 
-    equal(response, 'Pippo rolls 3, 2. Pippo moves from 60 to 63. Pippo bounces! Pippo returns to 61')
+    equal(response, 'Pippo rolls 3, 6. Pippo moves from 60 to 63. Pippo bounces! Pippo returns to 57')
   })
 })
